@@ -17,6 +17,7 @@ public class TrainTicketBookingController {
 	TrainTicketBookingService trainTicketBookingService;
 	@GetMapping("/get-all-details")  
 	public List<TrainTicketBooking> getAllTrainTicketBookingDetails(){
+		System.out.println("Inside Controller Class");
 		return trainTicketBookingService.getAllTrainTicketBookingDetails();
 	}
 }

@@ -15,6 +15,7 @@ public class TrainTicketBookingService {
 	TrainTicketBookingRepo trainTicketBookingRepo;
 
 	public List<TrainTicketBooking> getAllTrainTicketBookingDetails() {
+		System.out.println("Inside Service Class");
 		List<TrainTicketBooking> trainTicketBookingList = new ArrayList<>();
 		trainTicketBookingRepo.findAll().forEach(t -> {
 			trainTicketBookingList.add(t);
