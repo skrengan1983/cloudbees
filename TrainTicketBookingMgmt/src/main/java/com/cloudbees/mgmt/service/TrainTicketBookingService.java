@@ -8,16 +8,18 @@ import org.springframework.stereotype.Service;
 
 import com.cloudbees.mgmt.dto.TrainTicketBooking;
 import com.cloudbees.mgmt.repo.TrainTicketBookingRepo;
+
 @Service
 public class TrainTicketBookingService {
-@Autowired  
-TrainTicketBookingRepo trainTicketBookingRepo;
-public List<TrainTicketBooking> getAllTrainTicketBookingDetails(){
-	List<TrainTicketBooking> trainTicketBookingList=new ArrayList<>();
-			trainTicketBookingRepo.findAll().forEach(t -> {
-				trainTicketBookingList.add(t);
-			});
-	return trainTicketBookingList;
-}
+	@Autowired
+	TrainTicketBookingRepo trainTicketBookingRepo;
+
+	public List<TrainTicketBooking> getAllTrainTicketBookingDetails() {
+		List<TrainTicketBooking> trainTicketBookingList = new ArrayList<>();
+		trainTicketBookingRepo.findAll().forEach(t -> {
+			trainTicketBookingList.add(t);
+		});
+		return trainTicketBookingList;
+	}
 
 }
