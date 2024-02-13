@@ -15,20 +15,20 @@ public class TrainUser {
 @GeneratedValue(strategy = GenerationType.AUTO)
 private Integer id;
 @Column
-private String firstName;
+private String first_name;
 @Column
-private String lastName;
+private String last_name;
 @Column
-private String emailAddress;
+private String email_address;
 public TrainUser() {
 	super();
 }
-public TrainUser(Integer id, String firstName, String lastName, String emailAddress) {
+public TrainUser(Integer id, String first_name, String last_name, String email_address) {
 	super();
 	this.id = id;
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.emailAddress = emailAddress;
+	this.first_name = first_name;
+	this.last_name = last_name;
+	this.email_address = email_address;
 }
 public Integer getId() {
 	return id;
@@ -36,22 +36,27 @@ public Integer getId() {
 public void setId(Integer id) {
 	this.id = id;
 }
-public String getFirstName() {
-	return firstName;
+public String getFirst_name() {
+	return first_name;
 }
-public void setFirstName(String firstName) {
-	this.firstName = firstName;
+public void setFirst_name(String first_name) {
+	this.first_name = first_name;
 }
-public String getLastName() {
-	return lastName;
+public String getLast_name() {
+	return last_name;
 }
-public void setLastName(String lastName) {
-	this.lastName = lastName;
+public void setLast_name(String last_name) {
+	this.last_name = last_name;
 }
-public String getEmailAddress() {
-	return emailAddress;
+public String getEmail_address() {
+	return email_address;
 }
-public void setEmailAddress(String emailAddress) {
-	this.emailAddress = emailAddress;
+public void setEmail_address(String email_address) {
+	this.email_address = email_address;
+}
+@Override
+public String toString() {
+	return "TrainUser [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", email_address="
+			+ email_address + "]";
 }
 }
